@@ -1,11 +1,122 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+body{
+    height: 100%;
+    overflow: hidden;
+}
 canvas {
     width: 100%;
-    height: 100%;
-    background: black;
+    height: 90%;
+    background: -o-linear-gradient(135deg, #22c1c3, #fdbb2d,#4568dc, #b06ab3);
+    background: linear-gradient(-45deg, #22c1c3, #fdbb2d,#4568dc, #b06ab3);
+    background-size: 500% 500%;
+    -webkit-animation: gradient 10s cubic-bezier(0.260, 0.030, 0.525, 0.980) infinite;
+            animation: gradient 10s cubic-bezier(0.260, 0.030, 0.525, 0.980) infinite;
+}
+
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 
 html,body {
     height: 100%;
     margin: 0;
+}
+
+
+#instructions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+
+h3 {
+    background: -webkit-gradient(linear, left top, right top, from(rgb(192, 8, 152)), to(rgb(11, 213, 228)));
+    background: -o-linear-gradient(left, rgb(192, 8, 152), rgb(11, 213, 228));
+    background: linear-gradient(to right, rgb(192, 8, 152), rgb(11, 213, 228));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+text-shadow: 3px 4px 10px grey;
+letter-spacing: 1.3px;
+}
+
+em {
+    font-size: 30px;
+}
+
+#play {
+    margin-left: 50px;
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    background: teal;
+    color: #fff;
+    border-radius: 50rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    letter-spacing: .15rem;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    position: relative;
+    z-index: 1;
+    width: 10%;
+    top: 0;
+    margin-bottom: 20px;
+    outline: none;
+    cursor: pointer;
+    -webkit-box-shadow: 0 6px rgb(2, 95, 83);
+            box-shadow: 0 6px rgb(2, 95, 83);
+        -webkit-transition: all linear 0.2s;
+        -o-transition: all linear 0.2s;
+        transition: all linear 0.2s;
+
+}
+
+#play:hover {
+    top: 2px;
+    -webkit-box-shadow: 0 4px rgb(2, 95, 83);
+            box-shadow: 0 4px rgb(2, 95, 83);
+    -webkit-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+    background: rgb(4, 153, 133);
+    color: black;
+}
+
+#play:active {
+    top: 6px;
+    -webkit-transition: top linear 0.1s;
+    -o-transition: top linear 0.1s;
+    transition: top linear 0.1s;
 }
