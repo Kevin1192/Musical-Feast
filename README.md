@@ -8,3 +8,5 @@ It utilizes paper.js for visual shapes. http://paperjs.org
 
 
 This project is inspired by Patatap. https://patatap.com
+
+Hope you enjoy the game!
